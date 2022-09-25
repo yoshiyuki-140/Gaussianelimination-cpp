@@ -40,7 +40,7 @@ public:
         double tmp_matrix[Dimension][Dimension];
         for (int i = 0; i < Dimension; i++)
         {
-            std::cout << ">> ";
+            std::cout << "Is " << (i+1) << "row?: ";
             for (int j = 0; j < Dimension; j++)
             {
                 std::cin >> tmp_matrix[i][j];
