@@ -9,16 +9,4 @@
 MinGWのやつです。
 
 windows はhttps://www.mingw-w64.org/downloads/#mingw-builds でコンパイラダウンロード できます。
-visual studio code でも動くとは思います。わかりません。
-
-- 追加で
-
-pythonで実装した方をgithubに上げました。
-こっちは数の大きさに型の制限がかからないので(実装速度の制限はある。)いろいろと遊べます.
-
-- pythonのモジュール使えばもっと簡単に実装できるじゃん。
-
-知ってます。それより、アルゴリズムに改善があったり、変数名を変えたほうがいい、などのコードレビューをお願いします。
-コードレビューについては
-https://qiita.com/Teramonte4/items/43d026aeb92355d9bfd1
-が参考になりました。
+visual studio code でも動くとは思います。
