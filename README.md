@@ -22,8 +22,3 @@ pythonで実装した方をgithubに上げました。
 コードレビューについては
 https://qiita.com/Teramonte4/items/43d026aeb92355d9bfd1
 が参考になりました。
-
-- Mail
-
-c1221251@st.kanazawa-it.ac.jp
-大学側に与えられたやつなので、メールの確認が遅れるかもしれません。
