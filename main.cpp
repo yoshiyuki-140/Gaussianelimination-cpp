@@ -23,6 +23,9 @@ public:
             }
         }
     }
+    ~Gaussian_elimination()
+    {
+    }
 
     void ask_dimension()
     {
@@ -37,10 +40,15 @@ public:
         std::cout << "Please input matrix" << std::endl;
 
         // input
-        double tmp_matrix[Dimension][Dimension];
+        double **tmp_matrix = new double *[Dimension];
         for (int i = 0; i < Dimension; i++)
         {
-            std::cout << "Is " << (i+1) << "row?: ";
+            tmp_matrix[i] = new double[Dimension];
+        }
+
+        for (int i = 0; i < Dimension; i++)
+        {
+            std::cout << "Is " << (i + 1) << "row?: ";
             for (int j = 0; j < Dimension; j++)
             {
                 std::cin >> tmp_matrix[i][j];
@@ -55,11 +63,22 @@ public:
                 matrix[i][j] = tmp_matrix[i][j];
             }
         }
+
+        for (int i = 0; i < Dimension; i++)
+        {
+            delete[] tmp_matrix[i];
+        }
+        delete[] tmp_matrix;
     }
 
     void make_argumentied_matrix()
     {
-        double tmp_matrix[Dimension][Dimension * 2];
+        double **tmp_matrix = new double *[Dimension];
+        for (int i = 0; i < Dimension; i++)
+        {
+            tmp_matrix[i] = new double[Dimension * 2];
+        }
+
         for (int i = 0; i < Dimension; i++)
         {
             for (int j = 0; j < Dimension; j++)
@@ -86,6 +105,13 @@ public:
                 matrix[i][j] = tmp_matrix[i][j];
             }
         }
+
+        // clear dynamic memory
+        for (int i = 0; i < Dimension; i++)
+        {
+            delete[] tmp_matrix[i];
+        }
+        delete[] tmp_matrix;
     }
 
     void change_matrix(int n1)
