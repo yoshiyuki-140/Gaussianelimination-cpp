@@ -39,13 +39,14 @@ public:
     {
         std::cout << "Please input matrix" << std::endl;
 
-        // input
+        // dynamic memory
         double **tmp_matrix = new double *[Dimension];
         for (int i = 0; i < Dimension; i++)
         {
             tmp_matrix[i] = new double[Dimension];
         }
 
+        // input
         for (int i = 0; i < Dimension; i++)
         {
             std::cout << "Is " << (i + 1) << "row?: ";
@@ -64,6 +65,7 @@ public:
             }
         }
 
+        // clear dynamic memory
         for (int i = 0; i < Dimension; i++)
         {
             delete[] tmp_matrix[i];
